@@ -1,0 +1,50 @@
+{
+  "name": "video-downloader",
+  "version": "1.0.0",
+  "description": "A very simple script that allows you to download a video with its URL. Coded by Kubik in NodeJS.",
+  "main": "index.js",
+  "scripts": {
+    "start": "[ ! -d 'node_modules' ] && npm install; clear && node .",
+    "build": "[ ! -d 'node_modules' ] && npm install; clear && node build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pixel-Nation/video-downloader.js.git"
+  },
+  "author": "TotoroGaming",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pixel-Nation/video-downloader.js/issues"
+  },
+  "homepage": "https://github.com/Pixel-Nation/video-downloader.js#readme",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "child_process": "^1.0.2",
+    "commander": "^10.0.0",
+    "fs": "^0.0.1-security",
+    "os": "^0.1.2",
+    "path": "^0.12.7",
+    "pkg": "^5.8.1",
+    "prompts": "^2.4.2",
+    "request": "^2.88.2",
+    "url": "^0.11.0",
+    "util": "^0.12.5",
+    "ytdl-core": "^4.11.3"
+  },
+  "pkg": {
+    "scripts": "./index.js",
+    "targets": [
+      "node16-linuxstatic-arm64",
+      "node16-alpine-arm64",
+      "node16-linux-arm64",
+      "node16-macos-arm64",
+      "node16-win-arm64",
+      "node16-linuxstatic-x64",
+      "node16-alpine-x64",
+      "node16-linux-x64",
+      "node16-macos-x64",
+      "node16-win-x64"
+    ],
+    "outputPath": "./build"
+  }
+}
