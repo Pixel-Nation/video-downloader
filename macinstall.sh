@@ -7,5 +7,5 @@ curl "https://raw.githubusercontent.com/Pixel-Nation/video-downloader/main/index
 curl "https://raw.githubusercontent.com/Pixel-Nation/video-downloader/main/package.json" > "./package.json"
 npm i
 
-echo "\n\n# YGET\nalias yget=node $PWD/index.js" >> ~/.zshrc
+echo "\n\n# YGET\nalias \"yget=node $PWD/index.js\"" >> ~/.zshrc
 source ~/.zshrc
