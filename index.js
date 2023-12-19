@@ -2,13 +2,14 @@ console.clear();
 const { Command } = require('commander');
 const chalk = require('chalk');
 const prompts = require('prompts');
-const URL = require("url").URL;
-const fs = require('fs');
 const youtube = require('ytdl-core');
 const path = require('path');
 const util = require('util');
 const other = require('request');
-const os = require('os');
+
+const URL = require("node:url").URL;
+const fs = require('node:fs');
+const os = require('node:os');
 
 function openExplorerin(path) {
     var cmd = ``;
@@ -76,7 +77,7 @@ const program = new Command();
                         return new Promise(async function (resolve) {
 
                             if (parseURL.host.includes('youtube.com')) {
-                                youtube(url, { format: 'mp4', filter: 'audioandvideo' }).pipe(fs.createWriteStream(saveDir))
+                                youtube(url, { format: 'mp4', filter: 'audioandvideo', quality: 'highest' }).pipe(fs.createWriteStream(saveDir))
                                     .on('finish', () => resolve(true))
                                     .on('error', () => resolve(false))
                             }
